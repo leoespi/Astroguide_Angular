@@ -49,6 +49,9 @@ export class BodyComponent {
   }
 
   login(): void {
+
+    console.log(this.loginForm.get('email')?.value! + this.loginForm.get('password')?.value);
+    
     
     this.loginService.login(this.loginForm.get('email')?.value, this.loginForm.get('password')?.value)
       .subscribe( rs => {

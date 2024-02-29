@@ -26,10 +26,23 @@ export class CreateComponent {
     titulo: '',
     duracion: '',
     pregunta: '',
-    respuesta1: '',
+    respuestaCorrecta: '',
     respuesta2: '',
     respuesta3: '',
-    respuesta4: ''
+    respuesta4: '',
+
+    pregunta2: '',
+    respuestaCorrecta2:'',
+    respuesta5: '',
+    respuesta6: '',
+    respuesta7: '',
+
+    pregunta3: '',
+    respuestaCorrecta3:'',
+    respuesta8: '',
+    respuesta9: '',
+    respuesta10: '',
+    
     			
   });
 
@@ -50,10 +63,25 @@ export class CreateComponent {
             titulo: data.titulo,
             duracion: data.Duracion,
             pregunta: data.Pregunta,
-            respuesta1: data.Respuesta1,
+            respuestaCorrecta: data.RespuestaCorrecta,
             respuesta2: data.Respuesta2, 
             respuesta3:  data.Respuesta3,
-            respuesta4:  data.Respuesta4
+            respuesta4:  data.Respuesta4,
+
+            pregunta2: data.pregunta2,
+            respuestaCorrecta2:  data.RespuestaCorrecta2,
+            respuesta5: data.Respuesta5,
+            respuesta6: data.Respuesta6, 
+            respuesta7:  data.Respuesta7,
+
+            pregunta3: data.Pregunta3,
+            respuestaCorrecta3:  data.RespuestaCorrecta3,
+            respuesta8: data.Respuesta8,
+            respuesta9: data.Respuesta9, 
+            respuesta10:  data.Respuesta10,
+            
+
+
           })
         },
         err => {
@@ -70,10 +98,22 @@ export class CreateComponent {
       Titulo: this.quizForm.get('titulo')?.value!,
       Duracion: Number(this.quizForm.get('duracion')?.value),
       Pregunta: this.quizForm.get('pregunta')?.value,
-      Respuesta1: this.quizForm.get('respuesta1')?.value,
+      RespuestaCorrecta: this.quizForm.get('respuestaCorrecta')?.value,
       Respuesta2: this.quizForm.get('respuesta2')?.value,
       Respuesta3: this.quizForm.get('respuesta3')?.value,
-      Respuesta4:  this.quizForm.get('respuesta4')?.value
+      Respuesta4:  this.quizForm.get('respuesta4')?.value,
+
+      Pregunta2: this.quizForm.get('pregunta2')?.value,
+      RespuestaCorrecta2: this.quizForm.get('respuestaCorrecta2')?.value,
+      Respuesta5: this.quizForm.get('respuesta5')?.value,
+      Respuesta6: this.quizForm.get('respuesta6')?.value,
+      Respuesta7:  this.quizForm.get('respuesta7')?.value,
+
+      Pregunta3: this.quizForm.get('pregunta3')?.value,
+      RespuestaCorrecta3: this.quizForm.get('respuestaCorrecta3')?.value,
+      Respuesta8: this.quizForm.get('respuesta8')?.value,
+      Respuesta9: this.quizForm.get('respuesta9')?.value,
+      Respuesta10:  this.quizForm.get('respuesta10')?.value,
     };
     console.log(quiz);
     

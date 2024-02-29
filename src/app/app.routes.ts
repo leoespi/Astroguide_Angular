@@ -11,6 +11,8 @@ import { CreateComponent as CreateUsers} from './users/create/create.component';
 import { CreateComponent as CreateLogros } from './logros/create/create.component';
 import { IndexComponent as IndexLogros } from './logros/index/index.component';
 
+import { CreateComponent as CreateLecciones } from './lecciones/create/create.component';
+import { IndexComponent as IndexLecciones } from './lecciones/index/index.component';
 
 
 
@@ -32,6 +34,9 @@ export const routes: Routes = [
     {path: 'logros/index', component: IndexLogros },
     {path: 'logros/create', component: CreateLogros },
     {path: 'logros/editar/:id', component: CreateLogros }, 
+
+    {path: 'lecciones/index', component: IndexLecciones },
+    {path: 'lecciones/create', component: CreateLecciones },
 
     
 

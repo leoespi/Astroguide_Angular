@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class LogrosService {
-  url= "http://127.0.0.1:8000/api/logro"
+  url= "http://127.0.0.1:8000/api/logro/"
 
   constructor(private http: HttpClient) { }
 

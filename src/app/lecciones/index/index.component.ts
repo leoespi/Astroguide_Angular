@@ -39,8 +39,7 @@ export class IndexComponent {
   }
 
   eliminarLeccion(id: any): void {
-    this.leccionesService.deleteLeccion(id).subscribe(
-      data => {
+    this.leccionesService.deleteLeccion(id).subscribe(data => {
         this.cargarLecciones();
       },
       error => {
@@ -50,6 +49,6 @@ export class IndexComponent {
   }
 
   editarLeccion(id: any): void {
-    this.router.navigateByUrl("/lecciones/editar/" + id);
+    this.router.navigateByUrl("/lecciones/editar/"+id);
   }
 }

@@ -17,7 +17,6 @@ export class CreateComponent {
   logrosForm= this.fb.group({
     Nombre_del_Logro: '',
     Rareza: '',
-    user_id: null,
   });
   id: string | null;
 
@@ -36,7 +35,7 @@ export class CreateComponent {
           this.logrosForm.setValue({
             Nombre_del_Logro: data.Nombre_del_Logro,
             Rareza: data.Rareza,
-            user_id: data.user_id
+
           });
         },
         error =>{
@@ -50,7 +49,7 @@ export class CreateComponent {
     const logro:Logros = {
       Nombre_del_Logro: this.logrosForm.get('Nombre_del_Logro')?.value!,
       Rareza: this.logrosForm.get('Rareza')?.value!,
-      user_id: this.logrosForm.get('user_id')?.value!,
+      
 
     }
       if (this.id!=null){

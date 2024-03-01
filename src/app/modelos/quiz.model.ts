@@ -19,11 +19,12 @@ export class Quiz {
     Respuesta8:string | null | undefined;	
     Respuesta9:string | null | undefined;
     Respuesta10:string | null | undefined;
+    logro_id:number | null | undefined; 
 
 
     constructor ( id: number, Titulo :string, Duracion:number, Pregunta:string, RespuestaCorrecta:string, Respuesta2:string, Respuesta3:string, Respuesta4:string, 
         Pregunta2:string, RespuestaCorrecta2:string, Respuesta5:string, Respuesta6:string, Respuesta7:string,
-        Pregunta3:string, RespuestaCorrecta3:string, Respuesta8:string, Respuesta9:string, Respuesta10:string,  
+        Pregunta3:string, RespuestaCorrecta3:string, Respuesta8:string, Respuesta9:string, Respuesta10:string, logro_id:number,  
 
          ) {
         this.id = id;
@@ -46,6 +47,7 @@ export class Quiz {
         this.Respuesta8 = Respuesta8;
         this.Respuesta9 = Respuesta9;
         this.Respuesta10 = Respuesta10;
+        this.logro_id = logro_id;
         
         
 

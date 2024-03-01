@@ -9,18 +9,18 @@
 <body>
 
 <div class="scroll-container">
-    <form [formGroup]="leccionesForm" (ngSubmit)="agregarFicha()" action="" class="quiz-ficha example-form">
+    <form [formGroup]="leccionesForm" (ngSubmit)="agregarLecciones()" action="" class="quiz-ficha example-form">
         <div class="form-group">
-            <label for="nombre_de_la_leccion">Nombre de la lección:</label>
-            <input formControlName="nombre_de_la_leccion" matInput type="text" class="form-control" id="nombre_de_la_leccion" name="nombre_de_la_leccion">
+            <label for="Nombre_de_la_leccion">Nombre de la lección:</label>
+            <input formControlName="Nombre_de_la_leccion" matInput type="text" class="form-control" id="Nombre_de_la_leccion" name="Nombre_de_la_leccion">
         </div>
         <div class="form-group">
-            <label for="contenido">Contenido:</label>
-            <input formControlName="contenido" matInput type="text" class="form-control" id="contenido" name="contenido">
+            <label for="Contenido">Contenido:</label>
+            <input formControlName="Contenido" matInput type="text" class="form-control" id="Contenido" name="Contenido">
         </div>
         <div class="form-group">
-            <label for="tipo_de_leccion">Tipo de lección:</label>
-            <input formControlName="tipo_de_leccion" matInput type="text" class="form-control" id="tipo_de_leccion" name="tipo_de_leccion">
+            <label for="Tipo_de_leccion">Tipo de lección:</label>
+            <input formControlName="Tipo_de_leccion" matInput type="text" class="form-control" id="Tipo_de_leccion" name="Tipo_de_leccion">
         </div>
 
         <button type="submit" class="btn btn-primary">Crear</button>

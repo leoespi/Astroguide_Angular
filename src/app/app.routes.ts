@@ -21,10 +21,9 @@ export const routes: Routes = [
 
     {path: 'inicio/body', component: BodyComponent },
 
+    
     {path: 'quiz/index', component: IndexQuiz },
-
     {path: 'quiz/create', component: CreateQuiz },
-
     {path: 'quiz/editar/:id', component: CreateQuiz }, 
 
     {path: 'users/index', component:IndexUsers},
@@ -37,6 +36,7 @@ export const routes: Routes = [
 
     {path: 'lecciones/index', component: IndexLecciones },
     {path: 'lecciones/create', component: CreateLecciones },
+    {path: 'lecciones/editar/:id', component: CreateLecciones }, 
 
     
 

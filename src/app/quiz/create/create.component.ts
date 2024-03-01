@@ -42,6 +42,7 @@ export class CreateComponent {
     respuesta8: '',
     respuesta9: '',
     respuesta10: '',
+    logro_id: '',
     
     			
   });
@@ -79,6 +80,7 @@ export class CreateComponent {
             respuesta8: data.Respuesta8,
             respuesta9: data.Respuesta9, 
             respuesta10:  data.Respuesta10,
+            logro_id: data.Logro,
             
 
 
@@ -114,6 +116,7 @@ export class CreateComponent {
       Respuesta8: this.quizForm.get('respuesta8')?.value,
       Respuesta9: this.quizForm.get('respuesta9')?.value,
       Respuesta10:  this.quizForm.get('respuesta10')?.value,
+      logro_id:Number(this.quizForm.get('logro_id')?.value),
     };
     console.log(quiz);
     

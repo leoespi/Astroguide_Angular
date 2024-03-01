@@ -12,7 +12,7 @@ export class LeccionesService {
   constructor(private http:HttpClient){
   }
   addLecciones(leccion: Lecciones): Observable<any> {
-    return this.http.post(this.url, leccion);
+    return this.http.post(this.url,leccion);
   }
 
   getLecciones(): Observable<any> {
@@ -20,11 +20,11 @@ export class LeccionesService {
   }
   
   updateLeccion(id: string, leccion: Lecciones): Observable<any> {
-    return this.http.put(this.url + id, leccion);         
+    return this.http.put(this.url+id,leccion);         
   }
 
   deleteLeccion(id: string): Observable<any> {
-    return this.http.delete(this.url + id);
+    return this.http.delete(this.url+id);
   }
 
   

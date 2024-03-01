@@ -29,7 +29,7 @@ export class MenuComponent {
 
   logout(): void {
     localStorage.clear();
-    this.router.navigate(['/login']); // Redirige al usuario a la página de inicio de sesión después del logout
+    this.router.navigate(['/inicio/body']); // Redirige al usuario a la página de inicio de sesión después del logout
   }
 
 }

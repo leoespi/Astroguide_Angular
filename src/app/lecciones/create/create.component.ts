@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+                                import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -59,34 +59,32 @@ export class CreateComponent {
 
 
   }
-  agregarFicha(): void {
+  agregarLecciones(): void {
     const leccion: Lecciones = {
-      Nombre_de_la_leccion: this.leccionesForm.get('nombre_de_la_leccion')?.value,
-      Contenido: this.leccionesForm.get('contenido')?.value,
-      Tipo_de_leccion: this.leccionesForm.get('tipo_de_leccion')?.value
+      Nombre_de_la_leccion: this.leccionesForm.get('Nombre_de_la_leccion')?.value!,
+      Contenido: this.leccionesForm.get('Contenido')?.value!,
+      Tipo_de_leccion: this.leccionesForm.get('Tipo_de_leccion')?.value!,
     };
-  
-    console.log(leccion);
   
     if (this.id != null) {
       this.leccionesServicio.updateLeccion(this.id, leccion).subscribe(
         data => {
-          this._router.navigate(['/ficha/index']);
+          this._router.navigate(['/lecciones/index']);
         },
         err => {
           console.log(err);
-          this._router.navigate(['/ficha/index']);
+          this._router.navigate(['/lecciones/index']);
         }
       );
     } else {
       this.leccionesServicio.addLecciones(leccion).subscribe(
         data => {
           console.log(data);
-          this._router.navigate(['/ficha/index']);
+          this._router.navigate(['/lecciones/index']);
         },
         err => {
           console.log(err);
-          this._router.navigate(['/ficha/index']);
+          this._router.navigate(['/lecciones/index']);
         }
       );
     }

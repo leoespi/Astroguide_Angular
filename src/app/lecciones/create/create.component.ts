@@ -11,6 +11,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Lecciones} from '../../modelos/lecciones.model';
 import { LeccionesService } from '../../servicios/lecciones.service';
 
+
 @Component({
   selector: 'app-create',
   standalone: true,
@@ -21,19 +22,18 @@ import { LeccionesService } from '../../servicios/lecciones.service';
 })
 export class CreateComponent {
 
-  value = '';
+  //value = '';
 
   leccionesForm =  this.fb.group({
     Nombre_de_la_leccion: '',
-    Contenido: '',
-    Tipo_de_leccion: '',
-
-    
+    contenido: '',
+    Tipo_de_leccion: ''    
     			
   });
   id: string | null;
 
-  constructor(private fb: FormBuilder, private _router: Router, private leccionesServicio: LeccionesService, private aRoute: ActivatedRoute) {
+  constructor(private fb: FormBuilder, private _router: Router, 
+  private leccionesServicio: LeccionesService, private aRoute: ActivatedRoute) {
     this.id = this.aRoute.snapshot.paramMap.get('id');
   }
 
@@ -47,8 +47,8 @@ export class CreateComponent {
           
           this.leccionesForm.setValue({
             Nombre_de_la_leccion: data.Nombre_de_la_leccion,
-            Contenido: data.Contenido,
-            Tipo_de_leccion: data.Tipo_de_leccion
+            contenido: data.contenido,
+            Tipo_de_leccion: data.Tipo_de_leccion,
           });
         },
         err => {
@@ -62,7 +62,7 @@ export class CreateComponent {
   agregarLecciones(): void {
     const leccion: Lecciones = {
       Nombre_de_la_leccion: this.leccionesForm.get('Nombre_de_la_leccion')?.value!,
-      Contenido: this.leccionesForm.get('Contenido')?.value!,
+      contenido: this.leccionesForm.get('contenido')?.value!,
       Tipo_de_leccion: this.leccionesForm.get('Tipo_de_leccion')?.value!,
     };
   

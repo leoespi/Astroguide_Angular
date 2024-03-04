@@ -16,7 +16,7 @@
         <tr *ngFor="let leccion of listarLecciones">
             <td>{{ leccion.id }}</td>
             <td>{{ leccion.Nombre_de_la_leccion }}</td>
-            <td>{{ leccion.Contenido }}</td>
+            <td>{{ leccion.contenido }}</td>
             <td>{{ leccion.Tipo_de_leccion }}</td>
             <td>
                <button type="button" class="btn btn-danger" (click)=" eliminarLeccion(leccion.id)">Eliminar</button>
@@ -25,3 +25,4 @@
         </tr>
     </tbody>
 </table>
+|

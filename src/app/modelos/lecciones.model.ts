@@ -1,21 +1,16 @@
 export class Lecciones {
 
     id?: number;
-    Nombre_de_la_leccion: string | undefined;
-    Contenido: string  | undefined;
-    Tipo_de_leccion: string  | undefined;
+    Nombre_de_la_leccion: string | null| undefined;
+    contenido: string  | null|undefined ;
+    Tipo_de_leccion: string  | null| undefined;
 
-    constructor(Nombre_de_la_leccion: string,Contenido: string,Tipo_de_leccion: string,
-        id?: number
-      ) {
-        
+    constructor(id: number, Nombre_de_la_leccion: string, contenido: string,Tipo_de_leccion: string,
+        )
+        {
         this.id = id;
         this.Nombre_de_la_leccion = Nombre_de_la_leccion;
-        this.Contenido = Contenido;
+        this.contenido = contenido;
         this.Tipo_de_leccion = Tipo_de_leccion;
       }
-
-
-
-    
 }

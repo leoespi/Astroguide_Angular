@@ -29,7 +29,7 @@ export class IndexComponent {
   cargarLecciones(): void {
     this.leccionesService.getLecciones().subscribe(
       data => {
-        console.log(data);
+        
         this.listarLecciones = data;
       },
       err => {

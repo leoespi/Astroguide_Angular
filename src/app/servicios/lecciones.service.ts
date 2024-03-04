@@ -18,6 +18,10 @@ export class LeccionesService {
   getLecciones(): Observable<any> {
     return this.http.get(this.url);
   }
+
+  getLeccion(id: string):Observable<any> {
+    return this.http.get(this.url);
+  }
   
   updateLeccion(id: string, leccion: Lecciones): Observable<any> {
     return this.http.put(this.url+id,leccion);         
